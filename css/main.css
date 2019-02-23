@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 25px;
+	font-family: sans-serif;
+}
+
+/* Option */
+.option {
+	display: block;
+	margin-bottom: 0.5em;
+	line-height: 26px;
+}
+
+/* Check */
+.check {
+	padding-left: 1.9em;
+}
+
+.check__input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+}
+
+.check__box {
+	position: absolute;
+	margin-top: 0.2em;
+	margin-left: -1.8em;
+	width: 16px;
+	height: 16px;
+	overflow: hidden;
+	border-radius: 0.02em;
+	border: 2px solid #fff;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	box-shadow: 0 0 0 0.1em #010101;
+}
+
+/* Checked */
+.check__input:checked + .check__box {
+	background-image: url(../img/tick.svg);
+}
+
+/* Focused */
+.check__input:focus + .check__box {
+	box-shadow: 0 0 0 0.1em #000000, 0 0 0 0.2em #a4a4a442;
+}
+
+/* Disabled */
+.check__input:disabled + .check__box {
+	box-shadow: 0 0 0 0.1em #0000006b;
+	opacity: 0.4;
+}
+
+.check__input:checked:disabled + .check__box {
+
+opacity: 0.4;
+}
+
+/*----- Demo 2 -----*/
+
+.radio {
+  margin: 10px 0px;
+}
+.radio input[type=radio] {
+  display: none;
+}
+.radio input[type=radio] + label {
+  border: 2px solid #000;
+  height: 18px;
+  width: 18px;
+  display: inline-block;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.radio input[type=radio]:checked + label {
+  background: #000;
+  height: 14px;
+  width: 14px;
+  display: inline-block;
+  padding: 2px;
+  box-shadow: inset 0 0 0 4px #fff;
+}
+.radio .radio-text {
+  position: relative;
+  font-family: Arial;
+  font-size: 14px;
+  padding: 0 6px;
+  top: -5px;
+  cursor: pointer;
+}
